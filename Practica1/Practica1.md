@@ -26,7 +26,7 @@ Entonces Git se encarga de controlar las versiones y GitHub sirve como un lugar 
 
 - Brutti, F. (2025, 24 de junio). Haskell: descubre el lenguaje de programación funcional del momento. ThePower Education. https://thepower.education/blog/tech/haskell-lenguaje-de-programacion
 
-- Chacón Sartori, C. (2023, 7 de octubre). Entrevista a Simon Peyton Jones. Substack. https://camilocs.substack.com/p/entrevista-a-simon-peyton-jones Camilocs
+- Chacón Sartori, C. (2023, 7 de octubre). Entrevista a Simon Peyton Jones. Substack. https://camilocs.substack.com/p/entrevista-a-simon-peyton-jones
 
 - IONOS. (2020, 9 de octubre). ¿Qué es Haskell? Todo sobre el lenguaje de programación. https://www.ionos.mx/digitalguide/paginas-web/desarrollo-web/que-es-haskell/
 
