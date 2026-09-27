@@ -2,4 +2,4 @@
 
 ## Promp
 
-![Promp][promp.jpg]
+![Promp](promp.jpg)
