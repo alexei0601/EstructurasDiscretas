@@ -7,7 +7,31 @@ Descripcion: recibe un parametro numerico y realiza una reconversion
 eliminando 3 ceros al valor introducido.
 
 Uso: reconversion 1000 -> 1.0
+
 -}
 
 reconversion :: Double -> Double
 reconversion x = (/) x 1000
+
+{- Funcion: cashback
+
+Descripcion: recibe una cantidad numerica y regresa los puntos puntos obtenidos de
+cashback (10%) de una TDC.
+
+Uso: cashback 2545 -> 264
+
+-}
+
+cashback :: Double -> Double
+cashback x = (/) x 10
+
+{- Funcion: cashbackMonto
+Descripcion: Recibe una cantidad de puntos (cada punto vale $0.1) y devuelve la cantidad
+equivalente en dinero del total de puntos.
+
+Uso: cashbackMonto 264 0.10 -> 26.4
+-}
+
+cashbackMonto :: Double -> Double -> Double
+cashbackMonto x y = (*) x y
+
