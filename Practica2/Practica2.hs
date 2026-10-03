@@ -26,7 +26,7 @@ cashback :: Double -> Double
 cashback x = (/) x 10
 
 {- Funcion: cashbackMonto
-Descripcion: Recibe una cantidad de puntos (cada punto vale $0.1) y devuelve la cantidad
+Descripcion: recibe una cantidad de puntos (cada punto vale $0.1) y devuelve la cantidad
 equivalente en dinero del total de puntos.
 
 Uso: cashbackMonto 264 0.10 -> 26.4
@@ -35,3 +35,12 @@ Uso: cashbackMonto 264 0.10 -> 26.4
 cashbackMonto :: Double -> Double -> Double
 cashbackMonto x y = (*) x y
 
+{- Funcion: esDescendente
+Descripcion: recibe cuatro parametros numericos (x, y, z, w) y devuelve True si los numeros
+fueron introducidos en orden descendente y False si no lo fueron.
+
+Uso: esDescendente 10 9 8 7 -> True
+-}
+
+esDescendente :: Int -> Int -> Int -> Int -> Bool
+esDescendente x y z w = x > y && y > z && z > w
