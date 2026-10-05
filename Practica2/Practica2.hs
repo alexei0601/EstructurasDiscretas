@@ -60,12 +60,12 @@ Obesidad = 30 o mas
 Uso: imc 53.5 161 -> "normal"
 -}
 
-imc :: Double -> Double -> String
+imc :: Double -> Double -> IO ()
 imc peso altura =
-  if peso / ((altura / 100) ^ 2) < 18.5 then "bajo"
-  else if peso / ((altura / 100) ^ 2) <= 24.9 then "normal"
-  else if peso / ((altura / 100)^ 2) <= 29.9 then "sobrepeso"
-  else "obesidad"
+  if peso / ((altura / 100) ^ 2) < 18.5 then putStrLn("bajo")
+  else if peso / ((altura / 100) ^ 2) <= 24.9 then putStrLn("normal")
+  else if peso / ((altura / 100)^ 2) <= 29.9 then putStrLn("sobrepeso")
+  else putStrLn("obesidad")
 
 {-Funcion: hipotenusa
 Descripcion: recibe 2 parametros de tipo flotante, b que representa la base y h que representa la altura
@@ -93,15 +93,3 @@ Uso: pendiente (3.0, 2.0) (7.0, 8.0) -> 1.5
 pendiente :: (Float, Float) -> (Float, Float) -> Float
 pendiente (x1, y1) (x2, y2) = (y2 - y1) / (x2 - x1)
 
-{-Funcion: distanciaPuntos
-Descripcion: recibe 2 parametros (x1, y1) y (x2 y y2), los dos son tuplas con dos elementos de tipo
-flotante. La funcion devuelve un valor de tipo flotante que representa la distancia entre los puntos
-(x1, y1) y (x2, y2).
-
-distancia = √((x2 - x1)^2 + (y2 - y1)^2)
-
-Uso: distancia (2.0, 1.0) (5.0, 5.0) -> 5.0
--}
-
-distancia :: (Float, Float) -> (Float, Float) -> Float
-distancia (x1, y1) (x2, y2) = sqrt ( (x2 - x1)^2 + (y2 - y1)^2 )
