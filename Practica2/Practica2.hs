@@ -7,7 +7,6 @@ Descripcion: recibe un parametro numerico y realiza una reconversion
 eliminando 3 ceros al valor introducido.
 
 Uso: reconversion 1000 -> 1.0
-
 -}
 
 reconversion :: Double -> Double
@@ -19,7 +18,6 @@ Descripcion: recibe una cantidad numerica y regresa los puntos puntos obtenidos 
 cashback (10%) de una TDC.
 
 Uso: cashback 2545 -> 264
-
 -}
 
 cashback :: Double -> Double
@@ -34,6 +32,17 @@ Uso: cashbackMonto 264 0.10 -> 26.4
 
 cashbackMonto :: Double -> Double -> Double
 cashbackMonto x y = (*) x y
+
+{- (4) Funcion minutosHoras
+Descripcion: recibe un parametro numerico que representa una cantidad de minutos y devuelve
+su conversion en horas.
+
+Uso: minutosHoras 112 -> 1 hora y 52 minutos
+-}
+
+minutosHoras :: Int -> IO()
+minutosHoras minutos =
+  putStrLn(show (minutos `div` 60) ++ " horas y " ++ show (minutos `mod` 60) ++ " minutos" )
 
 {- (6) Funcion: esDescendente
 Descripcion: recibe cuatro parametros numericos (x, y, z, w) y devuelve True si los numeros
