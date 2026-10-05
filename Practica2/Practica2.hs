@@ -93,3 +93,15 @@ Uso: pendiente (3.0, 2.0) (7.0, 8.0) -> 1.5
 pendiente :: (Float, Float) -> (Float, Float) -> Float
 pendiente (x1, y1) (x2, y2) = (y2 - y1) / (x2 - x1)
 
+{-Funcion: distanciaPuntos
+Descripcion: recibe 2 parametros (x1, y1) y (x2 y y2), los dos son tuplas con dos elementos de tipo
+flotante. La funcion devuelve un valor de tipo flotante que representa la distancia entre los puntos
+(x1, y1) y (x2, y2).
+
+distancia = √((x2 - x1)^2 + (y2 - y1)^2)
+
+Uso: distancia (2.0, 1.0) (5.0, 5.0) -> 5.0
+-}
+
+distancia :: (Float, Float) -> (Float, Float) -> Float
+distancia (x1, y1) (x2, y2) = sqrt ( (x2 - x1)^2 + (y2 - y1)^2 )
