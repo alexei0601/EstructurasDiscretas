@@ -100,8 +100,8 @@ flotante. La funcion devuelve un valor de tipo flotante que representa la distan
 
 distancia = √((x2 - x1)^2 + (y2 - y1)^2)
 
-Uso: distancia (2.0, 1.0) (5.0, 5.0) -> 5.0
+Uso: distanciaPuntos(2.0, 1.0) (5.0, 5.0) -> 5.0
 -}
 
-distancia :: (Float, Float) -> (Float, Float) -> Float
-distancia (x1, y1) (x2, y2) = sqrt ( (x2 - x1)^2 + (y2 - y1)^2 )
+distanciaPuntos :: (Float, Float) -> (Float, Float) -> Float
+distanciaPuntos (x1, y1) (x2, y2) = sqrt ( (x2 - x1)^2 + (y2 - y1)^2 )
