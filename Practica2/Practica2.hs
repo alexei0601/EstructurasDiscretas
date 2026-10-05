@@ -44,6 +44,19 @@ minutosHoras :: Int -> IO()
 minutosHoras minutos =
   putStrLn(show (minutos `div` 60) ++ " horas y " ++ show (minutos `mod` 60) ++ " minutos" )
 
+{- (5) Funcion: esEstafa
+Descripcion: recibe 4 parametros de tipo entero: costo, pago, billeteJusto y cambioDevuelto.
+La funcion devuelve True si el cliente entrega inicialmente un billete de mayor denominacion
+que el costo, recibe cambio y posteriormente entrega un billete equivalente al costo para
+recuperar el billete inicial sin devolver el cambio recibido. Devuelve False en caso contrario.
+
+Uso: esEstafa 100 200 100 0 -> True
+-}
+
+esEstafa :: Int -> Int -> Int -> Int -> Bool
+esEstafa costo pago pagoJusto cambioDevuelto =
+  (pago > costo) && (pagoJusto == costo) && (cambioDevuelto == 0)
+
 {- (6) Funcion: esDescendente
 Descripcion: recibe cuatro parametros numericos (x, y, z, w) y devuelve True si los numeros
 fueron introducidos en orden descendente y False si no lo fueron.
