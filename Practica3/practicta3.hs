@@ -1,6 +1,8 @@
 -- Práctica 03: Mis tipos de datos y listas por compresión
 -- Fernando Alexei Santillan Rodriguez
 
+import EsParBit
+
 -- Crear tipo de dato Plazo
 
 data Plazo = Dias Int | Meses Int deriving (Show, Eq)
@@ -61,3 +63,14 @@ mensajeCetes monto_i (Dias n) =
   putStrLn("Despues de " ++ show(n) ++ " dias, obtuve " ++ show((cetes monto_i (Dias n)) - monto_i)
           ++ " de rendimiento bruto sin ningun riesgo crediticio. El monto total de mi inversion es "
           ++ show(cetes monto_i (Dias n)))
+
+{- (3) Funcion: soloPares
+
+Descripcion: recibe una lista de tipo entero y devuelve una lista con solo los numeros pares de
+la lista original.
+
+Uso: soloPares [1, 2, 3, 4] -> [2, 4]
+-}
+
+soloPares :: [Int] -> [Int]
+soloPares xs = [x | x <- xs, esParBit(x)]
