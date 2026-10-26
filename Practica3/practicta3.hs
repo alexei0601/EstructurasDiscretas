@@ -40,3 +40,24 @@ cetes monto_i (Dias 182) = monto_i * (1 + 0.0691 * (182 / 360))
 -- Casos para 12 meses/364 dias
 cetes monto_i (Meses 12) = monto_i * (1 + 0.0744 * (364 / 360))
 cetes monto_i (Dias 364) = monto_i * (1 + 0.0744 * (364 / 360))
+
+{- (2) Funcion: mensajeCetes
+
+Descripcion: recibe un monto inicial de inversion, un plazo (en dias o meses) y devuelve un mensaje
+indicando: El plazo de la inversión, el rendimiento bruto obtenido y el monto acumulado al finalizar el plazo.
+
+Uso: mensajeCetes 100 (Dias 28) -> "Despues de 28 dias, obtuve 0.47 de rendimiento bruto sin ningun
+riesgo crediticio. El monto total de mi inversion es 100.47"
+-}
+
+mensajeCetes :: Double -> Plazo -> IO()
+-- Caso meses
+mensajeCetes monto_i (Meses n) =
+  putStrLn("Despues de " ++ show(n) ++ " meses, obtuve " ++ show((cetes monto_i (Meses n)) - monto_i)
+          ++ " de rendimiento bruto sin ningun riesgo crediticio. El monto total de mi inversion es "
+          ++ show(cetes monto_i (Meses n)))
+-- Caso dias
+mensajeCetes monto_i (Dias n) =
+  putStrLn("Despues de " ++ show(n) ++ " dias, obtuve " ++ show((cetes monto_i (Dias n)) - monto_i)
+          ++ " de rendimiento bruto sin ningun riesgo crediticio. El monto total de mi inversion es "
+          ++ show(cetes monto_i (Dias n)))
