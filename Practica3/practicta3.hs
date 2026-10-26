@@ -64,7 +64,18 @@ mensajeCetes monto_i (Dias n) =
           ++ " de rendimiento bruto sin ningun riesgo crediticio. El monto total de mi inversion es "
           ++ show(cetes monto_i (Dias n)))
 
-{- (3) Funcion: soloPares
+{- (3) Funcion: negativos
+
+Descripcion: recibe una lista y a partir de una lista por comprension, cuenta los numeros negativos
+de esa lista
+
+Uso: negativos [-1, 2, 4, 6, -4] -> 2
+-}
+
+negativos :: [Int] -> Int
+negativos xs = length [x | x <- xs, x < 0]
+
+{- (4) Funcion: soloPares
 
 Descripcion: recibe una lista de tipo entero y devuelve una lista con solo los numeros pares de
 la lista original.
