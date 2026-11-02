@@ -13,7 +13,9 @@ a_natural 2 -> S ( S  Cero  )
 -}
 
 a_natural :: Int -> Nat
+-- Caso base
 a_natural 0 = Cero
+-- Caso recursivo
 a_natural n = S (a_natural (n - 1))
 
 {- (2) Funcion: a_entero
@@ -26,7 +28,9 @@ a_entero ( S ( S ( S Cero ) ) ) -> 3
 -}
 
 a_entero :: Nat -> Int
+-- Caso base
 a_entero Cero = 0
+-- Caso recursivo
 a_entero (S n) = 1 + a_entero n
 
 {- (3) Funcion: potenciaNat
@@ -38,8 +42,10 @@ potenciaNat ( S ( S ( S Cero ) ) ) ( S ( S Cero ) ) -> S ( S ( S ( S ( S ( S ( S
 -}
 
 potenciaNat :: Nat -> Nat -> Nat
+-- Casos base
 potenciaNat m Cero = S Cero
 potenciaNat Cero n = Cero
+-- Caso recursivo
 potenciaNat m (S n) = multiplica_nat m (potenciaNat m n)
 
 {- (4) Funcion: factNat
@@ -50,5 +56,7 @@ facNat ( S ( S ( S Cero ) ) ) -> S ( S ( S ( S ( S ( S Cero ) ) ) ) )
 -}
 
 factNat :: Nat -> Nat
+-- Caso base
 factNat Cero = S Cero
+-- Caso recursivo
 factNat (S n) = multiplica_nat (S n) (factNat n)

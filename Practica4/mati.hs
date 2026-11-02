@@ -13,9 +13,11 @@ mayorIgual ( Cont ( Cont Mati ) ) ( Cont ( Cont ( Cont Mati ) ) ) -> False   -- 
 -}
 
 mayorIgual :: Matrioska -> Matrioska -> Bool
+-- Casos base
 mayorIgual Mati Mati = True
 mayorIgual (Cont m) Mati = True
 mayorIgual Mati (Cont n) = False
+-- Caso recursivo
 mayorIgual (Cont m) (Cont n) = mayorIgual m n
 
 {- (7) Funcion: aplana
@@ -28,5 +30,7 @@ aplana ( Cont ( Cont Mati ) ) -> [ Cont ( Cont Mati ) , Cont Mati, Mati ]
 -}
 
 aplana :: Matrioska -> [Matrioska]
+-- Caso base
 aplana Mati = [Mati]
+-- Caso recursivo
 aplana (Cont m) = (Cont m):aplana(m)

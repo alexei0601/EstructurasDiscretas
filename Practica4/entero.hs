@@ -11,8 +11,10 @@ multiEnt ( Neg ( Succ ( Succ ( Succ ( Succ Zero ) ) ) ) ) ( Succ (Succ Zero ) ) 
 -}
 
 multiEnt :: Ent -> Ent -> Ent
+-- Casos base
 multiEnt Zero n = Zero
 multiEnt m Zero = Zero
+-- Casos recursivos
 multiEnt (Succ m) n = suma_ent n (multiEnt m n)
 multiEnt (Neg m) (Succ n) = Neg (multiEnt m (Succ n))
 multiEnt (Succ m) (Neg n) = Neg (multiEnt (Succ m) n)
