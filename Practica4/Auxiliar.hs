@@ -55,6 +55,9 @@ suma_ent (Neg n) (Succ m) = resta_ent (Succ m) n
 {- Función: resta_ent
 
 Descripción: Calcula la resta de dos enteros.
+
+Uso:
+resta_ent (Succ (Succ Zero) (Succ(Zero)) -> (Succ (Zero))
 -}
 
 resta_ent :: Ent -> Ent -> Ent
