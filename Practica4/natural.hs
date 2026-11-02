@@ -41,3 +41,14 @@ potenciaNat :: Nat -> Nat -> Nat
 potenciaNat m Cero = S Cero
 potenciaNat Cero n = Cero
 potenciaNat m (S n) = multiplica_nat m (potenciaNat m n)
+
+{- (4) Funcion: factNat
+
+Descripcion: recibe un natural y devuelve el factorial de un natural dado.
+Uso:
+facNat ( S ( S ( S Cero ) ) ) -> S ( S ( S ( S ( S ( S Cero ) ) ) ) )
+-}
+
+factNat :: Nat -> Nat
+factNat Cero = S Cero
+factNat (S n) = multiplica_nat (S n) (factNat n)
